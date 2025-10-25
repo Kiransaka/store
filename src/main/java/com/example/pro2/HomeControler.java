@@ -11,6 +11,8 @@ public class HomeControler {
     @RequestMapping("/")
     public String Index(){
         System.out.println("app name:- "+appName );
+        OrderService product = new OrderService();
+        product.order();
         return "index.html";
     }
 }
