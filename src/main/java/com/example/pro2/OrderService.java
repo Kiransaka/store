@@ -1,8 +1,15 @@
 package com.example.pro2;
 
 public class OrderService {
+    private PaymentSerivice paymentSerivice;
+    private int amount;
+    public OrderService (PaymentSerivice paymentSerivice, int amount){
+        this.paymentSerivice = paymentSerivice;
+        this.amount = amount;
+
+    }
     public void order(){
-        GpayPaymentSerivice paymentSerivice = new GpayPaymentSerivice();
-        paymentSerivice.PaymentProcess(2000);
+
+        paymentSerivice.PaymentProcess(amount);
     }
 }
