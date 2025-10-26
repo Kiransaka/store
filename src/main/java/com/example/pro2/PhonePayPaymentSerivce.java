@@ -1,5 +1,8 @@
 package com.example.pro2;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class PhonePayPaymentSerivce implements PaymentSerivice{
     @Override
     public void PaymentProcess(long amount) {

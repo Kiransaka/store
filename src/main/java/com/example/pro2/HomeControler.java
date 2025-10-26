@@ -11,7 +11,9 @@ public class HomeControler {
     @RequestMapping("/")
     public String Index(){
         System.out.println("app name:- "+appName );
-        OrderService orderService = new OrderService(new PhonePayPaymentSerivce(), 200000);
+        OrderService orderService = new OrderService();
+        orderService.setPaymentSerivice(new PhonePayPaymentSerivce());
+        orderService.setAmount(2010);
         orderService.order();
         return "index.html";
     }
